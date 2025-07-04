@@ -1,11 +1,10 @@
-// A Java GUI program that uses radio buttons to let users select a pet.
-// It displays the selected pet's image and shows a message box with the selection.
+
 
 /*
-Name : Craig Nginga  
-Reg No: BSE-05-0209/2024  
-Group : 3  
-Github username: Craig631
+Name : Gabriel Mutua 
+Reg No: BSE-05-0109/2024 
+Group : 2
+Github username: Gabriel408-bit
 */
 
 import javax.swing.*;
@@ -14,25 +13,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RadioButtonDemo extends JFrame implements ActionListener {
-    // Declare radio buttons and a label for the image
+  
     JRadioButton birdButton, catButton, dogButton, rabbitButton, pigButton;
     JLabel petImageLabel;
 
     public RadioButtonDemo() {
-        // Set up the frame
+     
         setTitle("RadioButtonDemo");
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 200);
 
-        // Create radio buttons and add action listeners
+     
         birdButton = new JRadioButton("Bird");
         catButton = new JRadioButton("Cat");
         dogButton = new JRadioButton("Dog");
         rabbitButton = new JRadioButton("Rabbit");
         pigButton = new JRadioButton("Pig");
 
-        // Group the radio buttons
+       
         ButtonGroup group = new ButtonGroup();
         group.add(birdButton);
         group.add(catButton);
@@ -40,18 +39,18 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
         group.add(rabbitButton);
         group.add(pigButton);
 
-        // Add action listener to all radio buttons
+       
         birdButton.addActionListener(this);
         catButton.addActionListener(this);
         dogButton.addActionListener(this);
         rabbitButton.addActionListener(this);
         pigButton.addActionListener(this);
 
-        // Create a label to display the pet image
+     
         petImageLabel = new JLabel();
         petImageLabel.setPreferredSize(new Dimension(100, 100));
 
-        // Add components to the frame
+       
         add(birdButton);
         add(catButton);
         add(dogButton);
@@ -82,12 +81,12 @@ public void actionPerformed(ActionEvent e) {
 
 
     private void showMessage(String message) {
-        // Display a message box with the selection
+       
         JOptionPane.showMessageDialog(this, message);
     }
 
     public static void main(String[] args) {
-        // Create and show the application window
+       
         RadioButtonDemo app = new RadioButtonDemo();
         app.setVisible(true);
 }
